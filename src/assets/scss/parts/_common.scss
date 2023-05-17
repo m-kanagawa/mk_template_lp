@@ -1,0 +1,105 @@
+/* 共通
+----------------------------------------------------*/
+
+html {
+  overflow-y: scroll;
+  font-size:62.5%;
+}
+
+body {
+  overflow: hidden;
+	color: var(--c-text);
+	font-size: var(--fz-base);
+  font-family: var(--ff-sans-serif);
+  line-height: 1.6;
+  background-color: var(--bg-body);
+  font-feature-settings: "palt";
+}
+
+.header,
+main,
+.footer {
+  max-width: 750px;
+  margin: auto;
+}
+
+//----------------------------------------------------
+// header
+//----------------------------------------------------
+
+.header {
+ 
+}
+
+//----------------------------------------------------
+// コンテンツエリア
+//----------------------------------------------------
+
+main {
+
+}
+
+//<a href="tel:">のリンクをPC表示時に無効
+@media(min-width: 768px) {
+  a[href^="tel:"]{
+    pointer-events: none;
+    text-decoration: none;
+    color: var(--c-text);
+  }
+}
+
+.inner {
+	max-width: var(--w-base);
+	padding: 0 15px;
+	margin: auto;
+	box-sizing: content-box;
+}
+
+//----------------------------------------------------
+// page-top
+//----------------------------------------------------
+
+.page-top {
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+	z-index: 10;
+  a {
+		height: 50px;
+		width: 50px;
+    margin: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+    background: var(--c-primary);
+    text-decoration: none;
+    border-radius: 50%;
+    color: #fff;
+		line-height: 1;
+		font-size: 3rem;
+		font-weight: 400;
+		svg {
+			fill:none;
+			stroke:#FFFFFF;
+			stroke-width:2;
+			stroke-linecap:round;
+			stroke-linejoin:round;
+		}
+  }
+}
+
+//----------------------------------------------------
+// footer
+//----------------------------------------------------
+
+.footer {
+  background-color: var(--bg-footer);
+  .copyright {
+    color: #fff;
+    font-size: 1.2rem;
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}

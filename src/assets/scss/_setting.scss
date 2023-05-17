@@ -1,0 +1,111 @@
+//----------------------------------------------------
+// 設定
+//----------------------------------------------------
+
+//Googlefont
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700,900&display=swap&subset=japanese');
+
+:root {
+	--c-base: #fff;
+	--c-primary: #79b46d;
+	--c-secondary: #fff;
+	--c-tertiary: #fff;
+	--c-accent: #fff;
+
+	--c-text: #333;
+	--c-text-reversal: #fff;
+	--c-header-text: #f60;
+	--c-footer-text: #f60;
+	--c-nav-text: #f60;
+	--c-btn-text: #f60;
+
+	--bg-body: #faf5ef;
+	--bg-header: var(--c-primary);
+	--bg-footer: var(--c-primary);
+	--bg-nav: var(--c-primary);
+	--bg-btn: var(--c-primary);
+
+	--c-white: #fff;
+	--c-red: #ff2626;
+	--c-gray: #efefef;
+	--c-black: #000;
+
+  // フォントサイズ
+  --fz-base: 1.6rem;
+
+  // サイズ
+	--w-base: 1200px;
+  --w-tb: 1024px;
+	--w-logo: min(20vw,260px);
+	--w-logo-sp: min(46vw,260px);
+	--w-mv: 1200px;
+
+  //ブレイクポイント
+  --bp-xs: 0;
+  --bp-sm: 576px;
+  --bp-md: 768px;
+  --bp-lg: 992px;
+  --bp-xl: 1200px;
+  --bp-xXl: 1400px;
+
+  --ff-sans-serif: Arial,'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  --ff-serif: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+
+}
+
+// ===================================================================
+// 汎用
+// ===================================================================
+a {color: var(--c-primary);}
+
+a:hover {text-decoration: none;}
+
+/*    decoration
+---------------------------------------------------- */
+.bold {font-weight:bold;}
+
+/*    hover
+---------------------------------------------------- */
+.mk {
+	transition: 0.2s ease-in-out;
+	&:hover {
+		opacity: 0.8;
+		filter: alpha(opacity=20);
+	}
+}
+
+/*   text
+---------------------------------------------------- */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+@media ( min-width : var(--bp-md)) {
+	.sp-only { display: none !important; }
+	.pc-text-center { text-align: center; }
+	.pc-text-left { text-align: left; }
+	.pc-text-right { text-align: right; }
+}
+@media ( max-width : var(--bp-md) - 1 ) {
+	.pc-only { display: none !important; }
+	.sp-text-center { text-align: center; }
+	.sp-text-left { text-align: left; }
+	.sp-text-right { text-align: right; }
+}
+
+/*    margin
+---------------------------------------------------- */
+@for $i from 0 through 10 {
+  .mt#{$i * 5} {
+    margin-top:#{$i * 5}px !important;
+  }
+  .mr#{$i * 5} {
+    margin-right:#{$i * 5}px !important;
+  }
+  .mb#{$i * 5} {
+    margin-bottom:#{$i * 5}px !important;
+  }
+  .ml#{$i * 5} {
+    margin-left:#{$i * 5}px !important;
+  }
+}
