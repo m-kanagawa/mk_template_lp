@@ -1,22 +1,5 @@
-// ===================================================================
 // mixin
 // ===================================================================
-@use "sass:math";//Dart Sassで除算を使う際に必要な記述
-//-- フォントサイズ
-//-- くの字矢印
-//-- グラデーション
-//-- formスタイルリセット
-
-
-
-// @function clampVw($min, $size, $max, $vp: 1920) {
-//   $min: $min * 0.1rem;
-//   $max: $max * 0.1rem;
-//   $num: 100 / $vp * 1vw;
-//   $size_vw: $num * $size;
-//   @return clamp($min, $size_vw, $max);
-// }
-
 
 // フォントサイズ
 // ----------------------------------------------------------
@@ -24,6 +7,7 @@
 // 理由はこれまでの実制作でhtmlに62.5%を指定している場合が多かったためで、その資産を流用しやすいようにしました。
 // 1行目はDart Sassで除算を使う際に必要な記述です。
 // https://blog.looseknot.jp/css/sass-clamp-fontsize.html
+@use "sass:math";//Dart Sassで除算を使う際に必要な記述
 @mixin clamp_fontsize($fs_min, $width_small, $width_large, $fs_max) {
   $preferred_vw_base: math.div(($fs_max - $fs_min), ($width_large - $width_small));
   $preferred_vw: ($preferred_vw_base * 100) * 1vw;
@@ -63,33 +47,6 @@
 	@else if ($deg == 'bottom') {transform: rotate(45deg);}
 }
 
-// グラデーション
-// https://cocotsubu.com/2019/12/11/post-3796/
-// @include gradient(#780c0c, #580000, vertical);
-// @include先で各定義箇所指定（開始色, 終了色, グラデーションの種類）
-
-// グラデーション
-@mixin gradient($start-color, $end-color, $orientation) {
-  background: $start-color;
-  @if $orientation == vertical {
-    // vertical - 垂直
-    background: -moz-linear-gradient(top, $start-color 0%, $end-color 100%);
-    background: -webkit-linear-gradient(top, $start-color 0%,$end-color 100%);
-    background: linear-gradient(to bottom, $start-color 0%,$end-color 100%);
-  }
-  @else if $orientation == horizontal {
-    // horizontal - 水平
-    background: -moz-linear-gradient(left, $start-color 0%, $end-color 100%);
-    background: -webkit-linear-gradient(left, $start-color 0%,$end-color 100%);
-    background: linear-gradient(to right, $start-color 0%,$end-color 100%);
-  }
-  @else {
-    // radial - 放射状
-    background: -moz-radial-gradient(center, ellipse cover, $start-color 0%, $end-color 100%);
-    background: -webkit-radial-gradient(center, ellipse cover, $start-color 0%,$end-color 100%);
-    background: radial-gradient(ellipse at center, $start-color 0%,$end-color 100%);
-  }
-}
 
 // formスタイルリセット
 // ----------------------------------------------------------

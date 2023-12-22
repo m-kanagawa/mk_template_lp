@@ -1,12 +1,4 @@
 @charset "utf-8";
-//----------------------------------------------------
-// 各SCSSファイルのインポート
-//----------------------------------------------------
-
-@import "setting";
-@import "parts/plugin"; 
-@import "parts/reset";
-@import "parts/mixin"; 
-@import "parts/common"; 
-
-@import "custom";
+@use "parts/reset";        // リセットCSS
+@use "parts";
+@use "custom";

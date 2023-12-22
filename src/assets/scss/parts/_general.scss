@@ -1,0 +1,65 @@
+@use "../global" as *;
+// ===================================================================
+// 汎用
+// ===================================================================
+
+//<a href="tel:">のリンクをPC表示時に無効
+@media(min-width: 768px) {
+  a[href^="tel:"]{
+    pointer-events: none;
+    text-decoration: none;
+    color: var(--c-text);
+  }
+}
+
+
+.c-red {color: var(--c-red);}
+
+.c-primary {color: var(--c-primary);}
+
+a {color: var(--c-link);}
+a:hover {text-decoration: none;}
+
+/*    decoration
+---------------------------------------------------- */
+.bold {font-weight:bold;}
+
+/*    hover
+---------------------------------------------------- */
+.mk {
+	transition: 0.2s ease-in-out;
+	&:hover {
+		opacity: 0.8;
+		filter: alpha(opacity=20);
+	}
+}
+
+/*   text
+---------------------------------------------------- */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+@media ( min-width : var(--bp-md)) {
+	.sp-only { display: none !important; }
+}
+@media ( max-width : var(--bp-md) - 1 ) {
+	.pc-only { display: none !important; }
+}
+
+/*    margin
+---------------------------------------------------- */
+@for $i from 0 through 10 {
+  .mt#{$i * 5} {
+    margin-top:#{$i * 5}px !important;
+  }
+  .mr#{$i * 5} {
+    margin-right:#{$i * 5}px !important;
+  }
+  .mb#{$i * 5} {
+    margin-bottom:#{$i * 5}px !important;
+  }
+  .ml#{$i * 5} {
+    margin-left:#{$i * 5}px !important;
+  }
+}

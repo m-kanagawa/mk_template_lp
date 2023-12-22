@@ -1,0 +1,105 @@
+@charset "utf-8";
+// 設定
+// ===================================================================
+
+//Googlefont
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700,900&display=swap&subset=japanese');
+
+
+// rgbの確認
+// https://ionicframework.jp/docs/theming/color-generator/
+
+// 各プラグイン用CSSの読み込み
+$css_swiper: true; //スライダー関係 true or false
+
+// -- サイズ
+// ------------------------------
+$xs: 0px;
+$sm: 576px;
+$md: 768px;// スマホ表示幅
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+$base_width: 1000px;
+$main_width: 740px;
+$main_visual_width: 100%;
+$tb_width: 1024px;
+
+:root {
+	// 基本カラー
+	--c-base: #fff;
+	--c-primary: #790A22;
+	--c-primary-rgb: 121,10,34;
+	--c-secondary: #808080;
+	--c-tertiary: #fff;
+	--c-accent: #ff7011;
+
+	--c-text: #222;
+	--c-text-reversal: #fff;
+	--c-body-bg: #eee;
+	--c-header-text: var(--c-text);
+	--c-header-bg: var(--c-primary);
+	--c-footer-text: var(--c-white);
+	--c-footer-bg: #000;
+	--c-nav-text: var(--c-white);
+	--c-nav-bg: var(--c-primary);
+	--c-btn-text: #000;
+	--c-btn-bg: #000;
+	--c-link: #0863EC;
+	--c-accordion: #002E73; //アコーディオン
+
+	//見出
+	--c-h1-text: var(--c-white);
+	--c-h1-bg: #000;
+	--c-h2-text: var(--c-white);
+	--c-h2-bg: var(--c-primary);
+	--c-h3-text: var(--c-primary);
+	--c-h3-bg: var(--c-primary);
+	--c-h4-text: var(--c-primary);
+	--c-h4-bg: var(--c-primary);
+
+	//テーブル
+	--c-table-th: var(--c-white);
+	--c-table-th-bg: var(--c-primary);
+	--c-table-td: var(--c-text);
+	--c-table-td-bg: var(--c-white);
+	--c-table-border: #E5E4D4;
+
+	//カラー
+	--c-white: #fff;
+	--c-white-rgb: 255,255,255;
+	--c-red: #ff2626;
+	--c-pink: #ffe1e1;
+	--c-blue: #e8e9ff;
+	--c-green: #edffe8;
+	--c-gray: #efefef;
+	--c-black: #000;
+	--c-black-rgb: 0,0,0;
+
+  // --z-index-header: 8;
+  // --z-index-header-logo: 10;
+  // --z-index-top-main: 7;
+  // --z-index-toggle_nav: 10;
+  // --z-index-toggle_nav_bg: 9;
+  // --z-index-drawer: 9;
+
+  // サイズ
+	// --w-base: 1200px;
+  // --w-tb: 1024px;
+	// --w-logo: min(20vw,260px);
+	// --w-logo-sp: min(46vw,260px);
+	// --w-mv: 1200px;
+
+  //ブレイクポイント
+  --bp-xs: 0;
+  --bp-sm: 576px;
+  --bp-md: 768px;
+
+  --ff-sans-serif: Arial,'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+
+  --ff-serif: 'Zen Old Mincho', YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+
+  --ff-eng: 'Lora', 'Zen Old Mincho', "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+
+}

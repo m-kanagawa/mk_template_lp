@@ -1,9 +1,4 @@
-.pc {display: block !important;}
-.sp {display: none !important;}
-@media screen and (max-width:750px){
-  .pc {display: none !important;}
-  .sp {display: block !important;}
-}
+@use "global" as *;
 
 .fadein {
   opacity : 0;

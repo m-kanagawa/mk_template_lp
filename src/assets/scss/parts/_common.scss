@@ -1,3 +1,4 @@
+@use "../global" as *;
 /* 共通
 ----------------------------------------------------*/
 
@@ -9,7 +10,7 @@ html {
 body {
   overflow: hidden;
 	color: var(--c-text);
-	font-size: var(--fz-base);
+	@include clamp_fontsize(14, 576, 992, 18);
   font-family: var(--ff-sans-serif);
   line-height: 1.6;
   background-color: var(--bg-body);
@@ -39,14 +40,6 @@ main {
 
 }
 
-//<a href="tel:">のリンクをPC表示時に無効
-@media(min-width: 768px) {
-  a[href^="tel:"]{
-    pointer-events: none;
-    text-decoration: none;
-    color: var(--c-text);
-  }
-}
 
 .inner {
 	max-width: var(--w-base);
