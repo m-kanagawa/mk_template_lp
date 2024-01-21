@@ -40,10 +40,10 @@ a:hover {text-decoration: none;}
 .text-left { text-align: left; }
 .text-right { text-align: right; }
 
-@media ( min-width : var(--bp-md)) {
+@media ( min-width : $md) {
 	.sp-only { display: none !important; }
 }
-@media ( max-width : var(--bp-md) - 1 ) {
+@media ( max-width : $md - 1 ) {
 	.pc-only { display: none !important; }
 }
 
